@@ -1,4 +1,6 @@
-public class Motor{
+package week2;
+
+public class Motor {
     public int speed=0;
     public boolean motorOn=false;
 
