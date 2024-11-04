@@ -2,7 +2,7 @@ import java.util.List;
 
 public class Order {
     private Customer customer;
-    private List<Food> foodItems; // This is the list of food items ordered
+    private List<Food> foodItems; 
     private boolean isCompleted;
 
     public Order(Customer customer, List<Food> foodItems) {
@@ -15,7 +15,7 @@ public class Order {
         return customer;
     }
 
-    public List<Food> getFoodItems() { // Make sure this method exists
+    public List<Food> getFoodItems() { 
         return foodItems;
     }
 

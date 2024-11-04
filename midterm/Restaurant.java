@@ -6,7 +6,7 @@ public class Restaurant {
     private List<Food> menu;
     private List<Employee> employees;
     private List<Order> orders;
-    private List<Ingredient> ingredientStock; // List of ingredients in stock
+    private List<Ingredient> ingredientStock;
 
     public Restaurant() {
         this.balance = 0.0;
@@ -42,11 +42,11 @@ public class Restaurant {
     public void processOrders() {
         for (Order order : orders) {
             Customer customer = order.getCustomer();
-            List<Food> foods = order.getFoodItems(); // Correctly accessing the food items
+            List<Food> foods = order.getFoodItems(); 
             for (Food food : foods) {
                 deductIngredients(food);
             }
-            order.completeOrder(); // Mark the order as complete
+            order.completeOrder(); 
         }
         orders.clear();
     }
@@ -55,7 +55,7 @@ public class Restaurant {
         for (Food.IngredientRequirement requirement : food.getIngredients()) {
             Ingredient stockIngredient = findIngredient(requirement.getIngredient().getName());
             if (stockIngredient == null || stockIngredient.getQuantity() < requirement.getQuantity()) {
-                return false; // Insufficient stock
+                return false; 
             }
         }
         return true;
@@ -76,7 +76,7 @@ public class Restaurant {
                 return ingredient;
             }
         }
-        return null; // Ingredient not found in stock
+        return null; 
     }
 
     public void receivePayment(double amount) {

@@ -5,7 +5,7 @@ public class Food {
     private String name;
     private double price;
     private int cookingTime;
-    private List<IngredientRequirement> ingredients; // List of required ingredients
+    private List<IngredientRequirement> ingredients;
 
     public Food(String name, double price, int cookingTime) {
         this.name = name;

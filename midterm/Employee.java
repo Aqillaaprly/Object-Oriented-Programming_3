@@ -9,9 +9,12 @@ public class Employee {
         this.skillLevel = skillLevel;
     }
     
-    public String getName() { return name; }
-    public String getRole() { return role; }
-    public int getSkillLevel() { return skillLevel; }
+    public String getName() { 
+        return name; }
+    public String getRole() { 
+        return role; }
+    public int getSkillLevel() { 
+        return skillLevel; }
 
     public void performSkill() {
         System.out.println(name + " is performing their job as a " + role);
